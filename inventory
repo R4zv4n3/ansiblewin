@@ -1,7 +1,0 @@
-[windows]
-192.168.0.3
-
-[windows:vars]
-ansible_user=razvan
-ansible_connection=ssh
-ansible_shell_type=powershell
