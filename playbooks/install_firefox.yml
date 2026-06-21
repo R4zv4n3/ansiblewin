@@ -1,0 +1,11 @@
+---
+- name: Install Firefox
+  hosts: windows
+  tasks:
+    - name: Install Firefox via winget
+      win_shell: winget install Mozilla.Firefox --accept-package-agreements --accept-source-agreements
+      register: result
+
+    - name: Show output
+      debug:
+        msg: "{{ result.stdout }}"
